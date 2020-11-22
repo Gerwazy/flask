@@ -1,0 +1,36 @@
+html, body {
+    height: 100%;
+    font-family:Roboto,sans-serif;
+    font-weight:200;
+    color: white;
+    background: linear-gradient(to left, rgba(9,9,9,0.6) 0%,rgba(9,9,9,0.6) 0%), url("../img/comp.jpg");
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    background-position: center;
+    height: 100%;
+    background-size: cover;
+    font-family:Roboto,sans-serif;
+}
+
+#home .btn {
+	margin-top: 50px;
+	width: 150px;
+	background-color: yellow;
+    color: black;
+	font-weight: bold;
+}
+
+
+.navbar.navbar-1 .navbar-toggler-icon {
+background-image: url("../img/hamburger.svg");
+}
+
+nav .navbar-nav li a{
+    color: yellow !important;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+#target_div {
+    font-size: 30px;
+}

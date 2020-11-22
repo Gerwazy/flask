@@ -1,0 +1,17 @@
+{% extends 'admin/admin_layout.html'%}
+
+{% block title %} Strona główna {% endblock %}
+
+{% block content %}
+<h1>Czas serwera:</h1>
+    <div id="target_div">
+
+    </div>
+    <script>
+    var targetContainer = document.getElementById("target_div");
+    var eventSource = new EventSource("/stream")
+    eventSource.onmessage = function(e) {
+    targetContainer.innerHTML = e.data;
+    };
+    </script>
+{% endblock content %}

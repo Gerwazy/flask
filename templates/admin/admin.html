@@ -1,0 +1,43 @@
+{% extends 'admin/admin_layout.html'%}
+
+{% block title %} Strona główna {% endblock %}
+
+{% block content %}
+<h2>Zarejestrowani użytkownicy</h2>
+<table class="table table-hover table-dark table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Użytkownik</th>
+      <th scope="col">Hasło</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  {% for key, value in data.items() recursive %}
+    <tr>
+      <td> {{ key }} </td>
+      <td> {{ value }}  </td>
+      <td> <a href="/delete/{{ key }}" class="btn btn-primary btn-block btn-success" role="button" aria-pressed="true">Usuń </a> </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+<br>
+<h2>Dodaj użytkownika</h2>
+<form method="POST" action="">
+  <div class="form-row align-items-center">
+    <div class="col-sm-3 my-1">
+      <input name="username" type="text" class="form-control">
+    </div>
+    <div class="col-sm-3 my-1">
+      <input name="password" type="password" class="form-control">
+    </div>
+    <div class="col-sm-3 my-1">
+      <button type="submit" class="btn btn-primary">Dodaj</button>
+    </div>
+  </div>
+</form>
+
+
+
+{% endblock content %}
